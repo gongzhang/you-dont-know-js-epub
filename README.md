@@ -4,16 +4,15 @@
 - Original book series:
 [getify/You-Dont-Know-JS](https://github.com/getify/You-Dont-Know-JS/tree/2nd-ed)
 
-- Inspired by gist @bmaupin:
+- Inspired by gist:
 [bmaupin/6e3649af73120fac2b6907169632be2c](https://gist.github.com/bmaupin/6e3649af73120fac2b6907169632be2c)
 
-## Getting Started
+## Get the Books
 
-Build and run with Docker:
+Run with Docker:
 
 ```
-docker build -t ydkjs-epub https://github.com/gongzhang/you-dont-know-js-epub.git
-docker run --rm -it --name ydkjs-epub -p 80:80 ydkjs-epub
+docker run --rm -it --name ydkjs-epub -p 80:80 gongzhang/ydkjs-epub
 ```
 
 Open http://localhost in browser: 
@@ -24,6 +23,15 @@ Download and enjoy!
 
 ![](res/epub.png)
 
-## Customization
+## DIY
 
-See `./epub.css` and `gen.sh`.
+Clone this repo and build with docker:
+
+```
+docker build -t ydkjs-epub .
+```
+
+Tips:
+
+- Change `RUN git clone ...` command in `Dockerfile` to generate different editions of the books.
+- Modify `epub.css` to customize style of the book which fits your e-book reader.
