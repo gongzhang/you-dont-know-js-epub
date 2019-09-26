@@ -11,7 +11,7 @@
 
 Run with Docker:
 
-```
+```sh
 docker run --rm -it --name ydkjs-epub -p 80:80 gongzhang/ydkjs-epub
 ```
 
@@ -27,11 +27,12 @@ Download and enjoy!
 
 Clone this repo and build with docker:
 
-```
+```sh
+# generate epubs from the original repo. see Dockerfile.
 docker build -t ydkjs-epub .
 ```
 
 Tips:
 
-- Change `RUN git clone ...` command in `Dockerfile` to generate different editions of the books.
+- Modify `RUN git clone ...` command in `Dockerfile` to generate different editions of the books.
 - Modify `epub.css` to customize style of the book which fits your e-book reader.

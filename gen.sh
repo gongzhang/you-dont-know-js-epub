@@ -10,7 +10,7 @@ find . -iname "*.md" -exec sed -i 's#<br>#<br />#' {} \;
 # Close img tags
 find . -iname "*.md" -exec sed -i -r 's#(<img.*[^/])>#\1 />#' {} \;
 
-cd getting\ started
+cd getting-started
 pandoc -S -o ../"You Don't Know JS: Getting Started.epub" \
   --epub-cover-image=cover.jpg \
   --epub-embed-font=/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf \
@@ -25,7 +25,7 @@ pandoc -S -o ../"You Don't Know JS: Getting Started.epub" \
   apA.md
 cd ..
 
-cd scope\ \&\ closures
+cd scope-closures
 pandoc -S -o ../"You Don't Know JS: Scope & Closures.epub" \
   --epub-cover-image=cover.jpg \
   --epub-embed-font=/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf \
@@ -41,11 +41,10 @@ pandoc -S -o ../"You Don't Know JS: Scope & Closures.epub" \
   ch5.md \
   apA.md \
   apB.md \
-  apC.md \
-  apD.md
+  apC.md
 cd ..
 
-cd this\ \&\ object\ prototypes
+cd this-object-prototypes
 pandoc -S -o ../"You Don't Know JS: this & Object Prototypes.epub" \
   --epub-cover-image=cover.jpg \
   --epub-embed-font=/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf \
@@ -60,11 +59,10 @@ pandoc -S -o ../"You Don't Know JS: this & Object Prototypes.epub" \
   ch4.md \
   ch5.md \
   ch6.md \
-  apA.md \
-  apB.md
+  apA.md
 cd ..
 
-cd types\ \&\ grammar
+cd types-grammar
 pandoc -S -o ../"You Don't Know JS: Types & Grammar.epub" \
   --epub-cover-image=cover.jpg \
   --epub-embed-font=/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf \
@@ -78,11 +76,10 @@ pandoc -S -o ../"You Don't Know JS: Types & Grammar.epub" \
   ch3.md \
   ch4.md \
   ch5.md \
-  apA.md \
-  apB.md
+  apA.md
 cd ..
 
-cd async\ \&\ performance
+cd async-performance
 pandoc -S -o ../"You Don't Know JS: Async & Performance.epub" \
   --epub-cover-image=cover.jpg \
   --epub-embed-font=/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf \
@@ -98,11 +95,10 @@ pandoc -S -o ../"You Don't Know JS: Async & Performance.epub" \
   ch5.md \
   ch6.md \
   apA.md \
-  apB.md \
-  apC.md
+  apB.md
 cd ..
 
-cd es\:next\ \&\ beyond
+cd es-next-beyond
 pandoc -S -o ../"You Don't Know JS: ES: Next & Beyond.epub" \
   --epub-cover-image=cover.jpg \
   --epub-embed-font=/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf \
