@@ -1,11 +1,13 @@
 # you-dont-know-js-epub
-"You Don't Know JS" (2nd Edition) ePub generator.
+"You Don't Know JS Yet" (2nd Edition) ePub generator.
 
 - Original book series:
 [getify/You-Dont-Know-JS](https://github.com/getify/You-Dont-Know-JS/tree/2nd-ed)
 
 - Inspired by gist:
 [bmaupin/6e3649af73120fac2b6907169632be2c](https://gist.github.com/bmaupin/6e3649af73120fac2b6907169632be2c)
+
+> NOTE: The 2nd edition of the book series is still a WORK IN PROGRESS.
 
 ## Get the Books
 
@@ -23,16 +25,20 @@ Download and enjoy!
 
 ![](res/epub.png)
 
-## DIY
+## Customization
 
-Clone this repo and build with docker:
+Recursively clone this repo and build with docker:
 
 ```sh
+git clone --recursive git@github.com:gongzhang/you-dont-know-js-epub.git
+
 # generate epubs from the original repo. see Dockerfile.
 docker build -t ydkjs-epub .
 ```
 
-Tips:
+## Known Issues & TODOs
 
-- Modify `RUN git clone ...` command in `Dockerfile` to generate different editions of the books.
-- Modify `epub.css` to customize style of the book which fits your e-book reader.
+- can not display images and figures
+- does support syntax highlighing
+- book title should be "You Don't Know JS __Yet__"
+- reduce hardcoding in `gen.sh` script
