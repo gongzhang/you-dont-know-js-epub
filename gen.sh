@@ -10,28 +10,32 @@ find . -iname "*.md" -exec sed -i 's#<br>#<br />#' {} \;
 # Close img tags
 find . -iname "*.md" -exec sed -i -r 's#(<img.*[^/])>#\1 />#' {} \;
 
-cd getting-started
-pandoc -S -o ../"You Don't Know JS: Getting Started.epub" \
-  --epub-cover-image=cover.jpg \
+cd get-started
+pandoc -S -o ../output/"You Don't Know JS - Get Started.epub" \
+  --epub-cover-image=./images/cover.png \
   --epub-embed-font=/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf \
   --epub-stylesheet=../epub.css \
   -M author="Kyle Simpson" \
-  -M title="You Don't Know JS: Getting Started" \
+  -M title="You Don't Know JS: Get Started" \
+  --columns=1000 \
   foreword.md \
   ../preface.md \
   ch1.md \
   ch2.md \
   ch3.md \
-  apA.md
+  ch4.md \
+  apA.md \
+  apB.md
 cd ..
 
 cd scope-closures
-pandoc -S -o ../"You Don't Know JS: Scope & Closures.epub" \
-  --epub-cover-image=cover.jpg \
+pandoc -S -o ../output/"You Don't Know JS - Scope & Closures.epub" \
+  --epub-cover-image=../covers/scope-closures.jpg \
   --epub-embed-font=/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf \
   --epub-stylesheet=../epub.css \
   -M author="Kyle Simpson" \
   -M title="You Don't Know JS: Scope & Closures" \
+  --columns=1000 \
   foreword.md \
   ../preface.md \
   ch1.md \
@@ -39,18 +43,19 @@ pandoc -S -o ../"You Don't Know JS: Scope & Closures.epub" \
   ch3.md \
   ch4.md \
   ch5.md \
+  ch6.md \
   apA.md \
-  apB.md \
-  apC.md
+  apB.md
 cd ..
 
-cd this-object-prototypes
-pandoc -S -o ../"You Don't Know JS: this & Object Prototypes.epub" \
-  --epub-cover-image=cover.jpg \
+cd objects-classes
+pandoc -S -o ../output/"You Don't Know JS - Object & Classes.epub" \
+  --epub-cover-image=../covers/this-object-prototypes.jpg \
   --epub-embed-font=/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf \
   --epub-stylesheet=../epub.css \
   -M author="Kyle Simpson" \
-  -M title="You Don't Know JS: this & Object Prototypes" \
+  -M title="You Don't Know JS: Object & Classes" \
+  --columns=1000 \
   foreword.md \
   ../preface.md \
   ch1.md \
@@ -63,12 +68,13 @@ pandoc -S -o ../"You Don't Know JS: this & Object Prototypes.epub" \
 cd ..
 
 cd types-grammar
-pandoc -S -o ../"You Don't Know JS: Types & Grammar.epub" \
-  --epub-cover-image=cover.jpg \
+pandoc -S -o ../output/"You Don't Know JS - Types & Grammar.epub" \
+  --epub-cover-image=../covers/types-grammar.jpg \
   --epub-embed-font=/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf \
   --epub-stylesheet=../epub.css \
   -M author="Kyle Simpson" \
   -M title="You Don't Know JS: Types & Grammar" \
+  --columns=1000 \
   foreword.md \
   ../preface.md \
   ch1.md \
@@ -79,13 +85,14 @@ pandoc -S -o ../"You Don't Know JS: Types & Grammar.epub" \
   apA.md
 cd ..
 
-cd async-performance
-pandoc -S -o ../"You Don't Know JS: Async & Performance.epub" \
-  --epub-cover-image=cover.jpg \
+cd sync-async
+pandoc -S -o ../output/"You Don't Know JS - Sync & Async.epub" \
+  --epub-cover-image=../covers/async-performance.jpg \
   --epub-embed-font=/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf \
   --epub-stylesheet=../epub.css \
   -M author="Kyle Simpson" \
-  -M title="You Don't Know JS: Async & Performance" \
+  -M title="You Don't Know JS: Sync & Async" \
+  --columns=1000 \
   foreword.md \
   ../preface.md \
   ch1.md \
@@ -99,12 +106,13 @@ pandoc -S -o ../"You Don't Know JS: Async & Performance.epub" \
 cd ..
 
 cd es-next-beyond
-pandoc -S -o ../"You Don't Know JS: ES: Next & Beyond.epub" \
-  --epub-cover-image=cover.jpg \
+pandoc -S -o ../output/"You Don't Know JS - ES Next & Beyond.epub" \
+  --epub-cover-image=../covers/es-next-beyond.jpg \
   --epub-embed-font=/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf \
   --epub-stylesheet=../epub.css \
   -M author="Kyle Simpson" \
   -M title="You Don't Know JS: ES: Next & Beyond" \
+  --columns=1000 \
   foreword.md \
   ../preface.md \
   ch1.md \
@@ -119,6 +127,7 @@ pandoc -S -o ../"You Don't Know JS: ES: Next & Beyond.epub" \
 cd ..
 
 # Workaround for https://github.com/jgm/pandoc/issues/3792
+cd output
 for epubfile in *.epub; do
     mkdir tmp-epub
     cd tmp-epub
