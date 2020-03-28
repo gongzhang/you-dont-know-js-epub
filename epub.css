@@ -1,22 +1,46 @@
 body {
   text-align: left;
+  margin: 5%;
+  font-size: medium;
+  line-height: 1.4;
+  font-family: sans-serif;
 }
+
+h1 { text-align: left; }
+h2 { text-align: left; }
+h3 { text-align: left; }
+h4 { text-align: left; }
+h5 { text-align: left; }
+h6 { text-align: left; }
+
+nav#toc ol,
+nav#landmarks ol { padding: 0; margin-left: 1em; }
+nav#toc ol li,
+nav#landmarks ol li { list-style-type: none; margin: 0; padding: 0; }
+a.footnote-ref { vertical-align: super; }
+
+em, em em em, em em em em em { font-style: italic;}
+em em, em em em em { font-style: normal; }
+
+span.smallcaps { font-variant: small-caps; }
+span.underline { text-decoration: underline; }
+div.column { display: inline-block; vertical-align: top; width: 50%; }
+div.hanging-indent { margin-left: 1.5em; text-indent: -1.5em;}
 
 code {
   font-family: "DejaVuSansMono", monospace;
   font-size: 0.9em;
   background-color: #f5f5f5;
   border-radius: 3px;
+  white-space: pre-wrap;
 }
 
 pre {
-  /* Don't make it too dark or it will be harder to read on e-ink devices */
   font-family: "DejaVuSansMono", monospace;
   background-color: #f5f5f5;
   border-radius: 3px;
   font-size: 0.9em;
   padding: 10px;
-  /* Wrap the text of pre sections */
   white-space: pre-wrap;
 }
 
