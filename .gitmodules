@@ -1,3 +1,6 @@
+[submodule "You-Dont-Know-JS-Yet"]
+	path = 2nd-edition
+	url = git@github.com:getify/You-Dont-Know-JS.git
 [submodule "You-Dont-Know-JS"]
-	path = You-Dont-Know-JS
+	path = 1st-edition
 	url = git@github.com:getify/You-Dont-Know-JS.git
