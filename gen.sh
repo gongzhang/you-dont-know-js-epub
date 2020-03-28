@@ -3,6 +3,8 @@
 # NOTE: this file is a modified version of gist:
 # https://gist.github.com/bmaupin/6e3649af73120fac2b6907169632be2c
 
+mkdir -p output
+
 ROOT_DIR=$PWD
 FONT_PATH=/usr/share/fonts/ttf-dejavu/DejaVuSansMono.ttf
 

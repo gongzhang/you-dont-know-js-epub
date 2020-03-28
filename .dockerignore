@@ -1,6 +1,9 @@
+.git
 .gitignore
 .dockerignore
 Dockerfile
 LICENSE
 README.md
 res
+1st-edition/.git
+2nd-edition/.git
